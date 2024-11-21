@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>年轻活力个人博客</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    background-color: #f5f7fa;
+    perspective: 1px;
+  }
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://img.alicdn.com/tfs/TB1GzJZrYGYBuNjy0FoXXciBFXa-2400-1600.jpg');
+    background-size: cover;
+    background-position: center;
+    transform-style: preserve-3d;
+    z-index: -1;
+    animation: moveBackground 20s linear infinite alternate;
+  }
+  @keyframes moveBackground {
+    from { transform: translateZ(-1px) scale(2); }
+    to { transform: translateZ(-1px) scale(2.5); }
+  }
+  header {
+    padding: 2rem;
+    text-align: center;
+    color: white;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 2rem auto;
+  }
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+  }
+  p {
+    font-size: 1.2em;
+  }
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 10rem);
+  }
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+  }
+  .card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    transition: all 0.3s ease-in-out;
+    padding: 2rem;
+    text-align: center;
+    color: white;
+  }
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 16px 64px 0 rgba(31, 38, 135, 0.37);
+  }
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 2rem auto;
+  }
+</style>
+</head>
+<body>
+
+<div class="background"></div>
+
+<header>
+  <h1>欢迎来到我的个人博客</h1>
+  <p>这里是分享生活的点滴与思考的空间。</p>
+</header>
+
+<main>
+  <section class="card-container">
+    <article class="card">
+      <h2>第一篇博客文章</h2>
+      <p>这是一篇关于日常生活的随笔...</p>
+    </article>
+    <article class="card">
+      <h2>第二篇博客文章</h2>
+      <p>这次分享的是我对某个技术的理解...</p>
+    </article>
+    <article class="card">
+      <h2>第三篇博客文章</h2>
+      <p>让我们一起探索这个美丽的世界...</p>
+    </article>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2024 我的个人博客. 版权所有.</p>
+</footer>
+
+</body>
+</html>
